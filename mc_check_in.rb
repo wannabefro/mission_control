@@ -8,4 +8,13 @@ class CheckIn
     @ci_filewriter.check_existance
   end
 
+  def write_check_in
+    if self.checked_in?
+      puts "You are already checked in."
+    else
+      @ci_filewriter.create_log
+    end
+
+  end
+
 end
