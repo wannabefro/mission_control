@@ -50,5 +50,19 @@ describe CheckIn do
     @checkin = CheckIn.new
   end
 
+  it "should respond to checked_in?" do
+    expect(@checkin).to respond_to :checked_in?
+  end
+
+  it "should return a boolean value when run" do
+    expect([true,false]).to include(@checkin.checked_in?)
+  end
+
+  it "should respond to get_time" do
+    expect(@checkin).to respond_to :get_time
+  end
+
+
+
 end
 
